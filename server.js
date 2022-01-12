@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -80,6 +81,6 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/frontend/index.html");
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("listening on 3000");
 });
